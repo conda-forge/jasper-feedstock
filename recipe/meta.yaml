@@ -1,6 +1,6 @@
 {% set version = "1.900.1" %}
 {% set jpeg_version = os.environ.get('JPEG_VERSION', '9b')|string %}
-{% set build_number = "3" %}
+{% set build_number = "4" %}
 
 package:
     name: jasper
