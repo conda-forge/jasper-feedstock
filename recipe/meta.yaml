@@ -1,21 +1,26 @@
+{% set version = "1.900.1" %}
+{% set jpeg_version = os.environ.get('JPEG_VERSION', '9b')|string %}
+{% set build_number = "4" %}
+
 package:
     name: jasper
-    version: 1.900.1
+    version: {{ version }}
 
 source:
-    fn: jasper-1.900.1.zip
-    url: http://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
+    fn: jasper-{{ version }}.zip
+    url: http://www.ece.uvic.ca/~frodo/jasper/software/jasper-{{ version }}.zip
     sha1: 9c5735f773922e580bf98c7c7dfda9bbed4c5191
 
 build:
-    number: 3
+    number: {{ build_number }}
+    string: jpeg{{ jpeg_version }}_{{ build_number }}
     skip: True  # [win]
 
 requirements:
     build:
-        - jpeg 9*
+        - jpeg {{ jpeg_version }}
     run:
-        - jpeg 9*
+        - jpeg {{ jpeg_version }}
 
 test:
     commands:
@@ -32,3 +37,4 @@ extra:
         - jakirkham
         - jhamman
         - ocefpaf
+        - 183amir
