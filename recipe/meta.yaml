@@ -8,19 +8,20 @@ source:
     sha1: 9c5735f773922e580bf98c7c7dfda9bbed4c5191
 
 build:
-    number: 3
+    number: 0
     skip: True  # [win]
+    string: jpeg8_0
 
 requirements:
     build:
-        - jpeg 9*
+        - jpeg 8*
     run:
-        - jpeg 9*
+        - jpeg 8*
 
 test:
     commands:
         - jasper --version
-        - conda inspect linkages -n _test jasper  # [linux]
+        # - conda inspect linkages -n _test jasper  # [linux]
 
 about:
   home: http://www.ece.uvic.ca/~frodo/jasper/
@@ -32,3 +33,4 @@ extra:
         - jakirkham
         - jhamman
         - ocefpaf
+        - 183amir
