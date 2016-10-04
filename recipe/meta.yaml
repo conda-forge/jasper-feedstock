@@ -21,7 +21,7 @@ requirements:
 test:
     commands:
         - jasper --version
-        - conda inspect linkages -n _test jasper  # [linux]
+        # - conda inspect linkages -n _test jasper  # [linux]
 
 about:
   home: http://www.ece.uvic.ca/~frodo/jasper/
