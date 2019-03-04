@@ -15,12 +15,14 @@ make
 make install
 cd ..
 
+# Todo, disable OpenGL only for aarch64 and ppc64le
 mkdir build_static && cd $_
 cmake \
     -DJAS_ENABLE_SHARED=OFF \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DJAS_ENABLE_AUTOMATIC_DEPENDENCIES=False \
+    -DJAS_ENABLE_OPENGL=False \
     ${CMAKE_PLATFORM_FLAGS[@]} ..
 make
 make install
