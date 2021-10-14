@@ -14,13 +14,6 @@ Current build status
 
 
 <table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://travis-ci.com/conda-forge/jasper-feedstock">
-        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/jasper-feedstock/master.svg?label=macOS">
-      </a>
-    </td>
-  </tr><tr>
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/jasper-feedstock">
