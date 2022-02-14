@@ -1,4 +1,4 @@
-{% set version = "2.0.33" %}
+{% set version = "3.0.2" %}
 
 package:
   name: jasper
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://github.com/jasper-software/jasper/releases/download/version-{{ version }}/jasper-{{ version }}.tar.gz
-  sha256: 28d28290cc2eaf70c8756d391ed8bcc8ab809a895b9a67ea6e89da23a611801a
+  sha256: 8b823a5354812c3be36a8e5a1b5b34a281bdc0e73f38d3c9a86303ee9e3cfbd3
 
 build:
   number: 0
   run_exports:
     # no info.  Leaving at default behavior.
     - {{ pin_subpackage('jasper') }}
-  missing_dso_whitelist:                                         # [osx]
+  missing_dso_whitelist:   # [osx]
     - /System/Library/Frameworks/GLUT.framework/Versions/A/GLUT  # [osx]
 
 requirements:
@@ -50,7 +50,7 @@ about:
   home: http://www.ece.uvic.ca/~frodo/jasper/
   license: JasPer 2.0
   license_file: LICENSE
-  summary: 'A reference implementation of the codec specified in the JPEG-2000 Part-1 standard.'
+  summary: A reference implementation of the codec specified in the JPEG-2000 Part-1 standard.
 
 extra:
   recipe-maintainers:
