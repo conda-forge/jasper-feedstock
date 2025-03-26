@@ -6,6 +6,8 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+jasper:
+- '4'
 libjpeg_turbo:
 - '3'
 target_platform:
