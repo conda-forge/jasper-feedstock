@@ -9,7 +9,7 @@ source:
   sha256: f71cf643937a5fcaedcfeb30a22ba406912948ad4413148214df280afc425454
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # no info.  Leaving at default behavior.
     - {{ pin_subpackage('jasper') }}
@@ -20,17 +20,6 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
-    - {{ cdt('mesa-libgl-devel') }}     # [linux]
-    - {{ cdt('mesa-dri-drivers') }}     # [linux]
-    - {{ cdt('libxdamage') }}           # [linux]
-    - {{ cdt('libselinux') }}           # [linux]
-    - {{ cdt('libxext') }}              # [linux]
-    - {{ cdt('libxfixes') }}            # [linux]
-    - {{ cdt('libxcb') }}               # [linux]
-    - {{ cdt('libxau') }}               # [linux]
-    - {{ cdt('libxi') }}                # [linux]
-    - {{ cdt('libxxf86vm') }}           # [linux]
-    - {{ cdt('expat-devel') }}          # [linux]
     - cmake
     - make
     - ninja                             # [win]
@@ -38,6 +27,8 @@ requirements:
     - libjpeg-turbo
     - libglu                            # [linux]
     - freeglut                          # [linux or win]
+    - libgl-devel                       # [linux]
+    - expat                             # [linux]
   run:
     - libjpeg-turbo
     - {{ pin_compatible('libglu') }}    # [linux]
